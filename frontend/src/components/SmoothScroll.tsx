@@ -71,7 +71,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
   }, [pathname]); // Re-run effect when pathname changes
 
   return (
-    <div ref={containerRef} className="smooth-scroll-container">
+    <div ref={containerRef} className="smooth-scroll-container w-full">
       {children}
     </div>
   );

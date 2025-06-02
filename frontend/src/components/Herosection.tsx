@@ -129,7 +129,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#FD7024] text-[#fff0b3]">
+    <div className="relative w-full min-h-screen bg-[#FD7024] text-[#fff0b3]">
       
       {/* Animated grain overlay */}
       <div className="fixed inset-0 pointer-events-none z-50 grain-animation opacity-30">
