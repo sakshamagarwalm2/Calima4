@@ -67,10 +67,10 @@ export default function RevealAnimation({ children }: { children: React.ReactNod
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full overflow-x-hidden">
       {isLoading && (
         <div className="loading-screen fixed inset-0 bg-[#121212] flex justify-center items-center z-50">
-          <div className="follow absolute bg-[#f48049] h-[2px] w-0 left-0 z-[2]"></div>
+          <div className="follow absolute bg-[#FD7024] h-[2px] w-0 left-0 z-[2]"></div>
           <div 
             className="hide absolute left-0 bg-white h-[2px] transition-all duration-400 ease-out"
             style={{ width: `${counter}%` }}

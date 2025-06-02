@@ -14,7 +14,7 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
     // Register GSAP plugins
     gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-    // Handle anchor links with smooth scrolling
+    // Handle anchor as with smooth scrolling
     const handleAnchorClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       const anchor = target.closest('a');
