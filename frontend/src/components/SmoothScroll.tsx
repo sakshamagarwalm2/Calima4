@@ -4,9 +4,11 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { usePathname } from 'next/navigation';
 
 export default function SmoothScroll({ children }: { children: React.ReactNode }) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     // Register GSAP plugins
@@ -58,12 +60,15 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
       });
     });
 
+    // Scroll to top on page load
+    window.scrollTo(0, 0);
+
     // Clean up
     return () => {
       document.removeEventListener('click', handleAnchorClick);
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [pathname]); // Re-run effect when pathname changes
 
   return (
     <div ref={containerRef} className="smooth-scroll-container">
