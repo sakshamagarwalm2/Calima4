@@ -12,12 +12,12 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="w-full bg-white shadow-sm fixed top-0 left-0 right-0 z-50 ">
+    <header className="w-full bg-white/40 shadow-sm fixed top-0 left-0 right-0 z-50 ">
       <nav className="max-w-7xl mx-auto px-6 h-16">
         <div className="flex items-center justify-between h-full">
           {/* Logo */}
           <Link href="/" className="text-xl font-bold text-black">
-            Logo
+            CALIMAFOUR
           </Link>
 
           {/* Navigation Items */}

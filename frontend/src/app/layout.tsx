@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Calima4',
-  description: 'Calima4 website with smooth scrolling',
+  description: 'A modern web application',
 };
 
 export default function RootLayout({
