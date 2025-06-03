@@ -1,0 +1,1331 @@
+Directory structure:
+└── dmitrinaumov-paralax-effect-with-gsap-scrolltrigger/
+    ├── README.md
+    ├── index.html
+    ├── img/
+    ├── js/
+    │   ├── js.js
+    │   └── luxy.js
+    └── style/
+        ├── normalize.css
+        └── style.css
+
+================================================
+FILE: README.md
+================================================
+# Paralax-effect-with-gsap-scrolltrigger
+Paralax effect with gsap scrolltrigger
+
+DEMO - https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/ \
+
+
+
+================================================
+FILE: index.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Paralax Effect On GSAP</title>
+	<link rel="icon" href="img/icon.jpg" type="icon/x-icon">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style/normalize.css">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+	<!-- div .wrapp -->
+	<div id="luxy" class="wrapp">
+
+		<!-- div .header -->
+		<header class="header">
+			<h1 class="title" data-splitting><span class="title_paralax">Parallax effect</span><span class="stroke">on
+					gsap</span></h1>
+			<div class="header__img">
+				<img src="img/1.jpg" alt="1">
+			</div>
+			<div class="header__marq">
+				<div class="header__marq-wrapp">
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+					<span class="header__marq-txt">discuss your ideas
+						<span class="header__marq-star">
+							<img src="img/star.svg" alt="">
+						</span>
+					</span>
+				</div>
+			</div>
+		</header>
+
+		<main class="main">
+
+			<!-- div .about -->
+			<section class="about">
+				<div class="about__wrapp">
+					<div class="about__img">
+						<img src="img/2.jpg" alt="2">
+					</div>
+					<div class="about__txt">
+						<h2 class="section-title">abo<span class="stroke">ut</span>
+							<span class="section-title__square"></span>
+						</h2>
+						<p class="about__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque esse
+							aspernatur fugit debitis quisquam. Quia exercitationem ipsum voluptas voluptatum hic
+							enim quo provident culpa possimus cupiditate! Dolorum quae doloremque cum rerum ipsam
+							inventore beatae, at odit, velit, aspernatur minima! Corporis.</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- div .benefits -->
+			<section class="benefits">
+				<div class="content">
+					<h2 class="section-title">benef<span class="stroke">its</span>
+						<span class="section-title__square"></span>
+					</h2>
+
+					<ul class="benefits__list">
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-200">/01</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/02</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/03</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-150">/04</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-110">/05</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+						<li class="benefits__item">
+							<span class="benefits__num" data-speed="-200">/06</span>
+							<p class="benefits__p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, quas.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- div .work -->
+			<section class="work">
+				<div class="content">
+					<h2 class="section-title">portfo<span class="stroke">lio</span>
+						<span class="section-title__square"></span>
+					</h2>
+				</div>
+
+				<div class="work__wrapp">
+					<div class="work__item" data-speed="-300">
+						<span class="work__item-num" data-speed="-1000">/001</span>
+						<div class="work__item-img">
+							<img src="img/3.jpg" alt="3">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-600">
+						<span class="work__item-num" data-speed="-500">/002</span>
+						<div class="work__item-img">
+							<img src="img/4.jpg" alt="4">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-700">
+						<span class="work__item-num" data-speed="-700">/003</span>
+						<div class="work__item-img">
+							<img src="img/5.jpg" alt="5">
+						</div>
+					</div>
+					<div class="work__item" data-speed="-400">
+						<span class="work__item-num" data-speed="-200">/004</span>
+						<div class="work__item-img">
+							<img src="img/6.jpg" alt="6">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- div .serv -->
+			<section class="serv">
+				<div class="content">
+					<h2 class="section-title">servic<span class="stroke">es</span>
+						<span class="section-title__square"></span>
+					</h2>
+
+					<div class="serv__list">
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="500">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Graphic Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="400">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/UX/UI Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="800">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Web Design</span>
+							</div>
+						</div>
+						<div class="serv__item">
+							<span class="serv__item-arrow" data-speed="600">
+								<img src="img/arrow.svg" alt="">
+							</span>
+							<div class="serv__item-txt">
+								<span class="serv__item-text">/Brend Design</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- div .footer -->
+		<footer class="footer">
+			<div class="footer__div">
+				<span data-speed="-300">a</span>
+				<span data-speed="100">p</span>
+				<span data-speed="300">p</span>
+				<span data-speed="-300">r</span>
+				<span data-speed="350">o</span>
+				<span data-speed="200">v</span>
+				<span data-speed="-310">e</span>
+				<span data-speed="200">c</span>
+				<span data-speed="-340">o</span>
+				<span data-speed="-100">d</span>
+				<span data-speed="300">e</span>
+			</div>
+		</footer>
+	</div>
+	<!-- /div .wrapp END -->
+	<script src="js/splitting.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+	<script src="js/luxy.js"></script>
+	<script src="js/js.js"></script>
+</body>
+
+</html>
+
+
+
+================================================
+FILE: js/js.js
+================================================
+document.addEventListener("DOMContentLoaded", function () {
+
+	'use strict';
+
+
+
+	Splitting();
+	luxy.init();
+	gsap.registerPlugin(ScrollTrigger);
+
+	const gTl = gsap.timeline();
+	gTl.from(".title .char", 1, { opacity: 0, yPercent: 130, stagger: 0.06, ease: "back.out" });
+	gTl.to(".header__img", 2, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", scale: 1, ease: "expo.out" }, "-=1");
+	gTl.from(".header__marq", 2, { opacity: 0, yPercent: 100, ease: "expo.out" }, "-=1.5");
+
+	const gsapSq = gsap.utils.toArray('.section-title__square');
+	gsapSq.forEach((gSq, i) => {
+		const rotat = gsap.from(gSq, 3, { rotation: 720 });
+		ScrollTrigger.create({
+			trigger: gSq,
+			animation: rotat,
+			start: 'top bottom',
+			scrub: 1.9
+		});
+	});
+
+
+	//header
+	function header() {
+		gsap.to('.title_paralax', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			yPercent: -150
+		})
+		gsap.to('.header .stroke', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			xPercent: 50
+		})
+		gsap.to('.header__img', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			xPercent: -70
+		})
+		gsap.to('.header__img img', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			scale: 1.3
+		})
+		gsap.to('.header__marq-wrapp', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			xPercent: -50
+		})
+		gsap.to('.header__marq-star img', {
+			scrollTrigger: {
+				trigger: '.header',
+				start: 'top top',
+				scrub: 1.9
+			},
+			rotate: -720
+		})
+	}
+	header();
+
+
+	//about
+	function about() {
+		gsap.from('.about__img', {
+			scrollTrigger: {
+				trigger: '.about',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			yPercent: 80
+		})
+		gsap.from('.about__img img', {
+			scrollTrigger: {
+				trigger: '.about',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			scale: 1.6
+		})
+		gsap.to('.about__txt', {
+			scrollTrigger: {
+				trigger: '.about__wrapp',
+				start: 'top bottom',
+				scrub: 1.9
+			},
+			yPercent: 50
+		})
+	}
+	about();
+
+
+	//benefits
+	function benefits() {
+		gsap.from('.benefits__num', {
+			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+			scrollTrigger: {
+				trigger: '.benefits__list',
+				start: 'top bottom',
+				scrub: 1.9
+			}
+		})
+	}
+	benefits();
+
+
+	//portfolio
+	function portfolio() {
+		gsap.from('.work__item, .work__item-num', {
+			y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+			scrollTrigger: {
+				trigger: '.work',
+				start: 'top bottom',
+				scrub: 1.9
+			}
+		})
+		gsap.from('.work__item-img img', {
+			scale: 1.6,
+			scrollTrigger: {
+				trigger: '.work__wrapp',
+				start: 'top bottom',
+				scrub: 1.9
+			}
+		})
+	}
+	portfolio();
+
+
+	//serv
+	function serv() {
+		gsap.from('.serv__item-arrow', {
+			x: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+			scrollTrigger: {
+				trigger: '.serv__list',
+				start: 'top bottom',
+				scrub: 1.9
+			}
+		})
+	}
+	serv();
+
+
+	//footer
+	function footer() {
+		gsap.from('.footer__div span', {
+			y: (i, el) => (1 - parseFloat(el.getAttribute('data-speed'))),
+			opacity: 0,
+			scrollTrigger: {
+				trigger: '.footer',
+				start: 'top bottom',
+				end: 'bottom bottom',
+				scrub: 1.9
+			}
+		})
+	}
+	footer();
+});
+
+
+================================================
+FILE: js/luxy.js
+================================================
+/**
+ * Written by Mineo Okuda on 01/03/18.
+ *
+ * Mineo Okuda - development + design
+ * https://willstyle.co.jp
+ * https://github.com/min30327
+ *
+ * MIT license.
+ */
+
+(function(root, factory) {
+	'use strict';
+
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define([], factory);
+	}
+	else if (typeof exports === 'object') {
+		// COMMONJS
+		module.exports = factory();
+	}
+	else {
+		// BROWSER
+		root.luxy = factory();
+	}
+}(this, function() {
+
+	'use strict';
+	
+		var defaults = {
+			wrapper: '#luxy',
+			targets : '.luxy-el',
+			wrapperSpeed: 0.08,
+			targetSpeed: 0.02,
+			targetPercentage: 0.1
+		};
+
+ 		var requestAnimationFrame = 
+			window.requestAnimationFrame || window.mozRequestAnimationFrame ||
+			window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+			window.requestAnimationFrame = requestAnimationFrame;
+		var cancelAnimationFrame = window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+
+		/**
+		 * Merge two or more objects. Returns a new object.
+		 * @param {Object}   objects  The objects to merge together
+		 * @returns {Object}          Merged values of defaults and options
+		 */
+		var extend = function () {
+
+			// Variables
+			var extended = {};
+			var deep = false;
+			var i = 0;
+			var length = arguments.length;
+
+			// Merge the object into the extended object
+			var merge = function (obj) {
+				for (var prop in obj) {
+					if (obj.hasOwnProperty(prop)) {
+						extended[prop] = obj[prop];
+					}
+				}
+			};
+
+			// Loop through each object and conduct a merge
+			for ( ; i < length; i++ ) {
+				var obj = arguments[i];
+				merge(obj);
+			}
+
+			return extended;
+
+		};
+
+		var Luxy = function(){
+			this.Targets = [];
+			this.TargetsLength = 0;
+			this.wrapper = '';
+			this.windowHeight = 0;
+			this.wapperOffset = 0;
+		};
+		Luxy.prototype = {
+			isAnimate: false,
+			isResize : false,
+			scrollId: "",
+			resizeId: "",
+			init : function(options){
+				this.settings = extend(defaults, options || {});
+				this.wrapper = document.querySelector(this.settings.wrapper);
+
+				if(this.wrapper==="undefined"){
+					return false;
+				}
+				this.targets = document.querySelectorAll(this.settings.targets);
+				document.body.style.height = this.wrapper.clientHeight + 'px';
+
+				this.windowHeight = window.clientHeight;
+				this.attachEvent();
+				this.apply(this.targets,this.wrapper);
+				this.animate();
+				this.resize();
+			},
+			apply : function(targets,wrapper){
+				this.wrapperInit();
+				
+				this.targetsLength = targets.length;
+				for (var i = 0; i < this.targetsLength; i++) {
+					var attr = {
+						offset : targets[i].getAttribute('data-offset'),
+						speedX : targets[i].getAttribute('data-speed-x'),
+						speedY : targets[i].getAttribute('data-speed-Y'),
+						percentage : targets[i].getAttribute('data-percentage'),
+						horizontal : targets[i].getAttribute('data-horizontal')
+					};
+					this.targetsInit(targets[i],attr);
+				}
+			},
+			wrapperInit: function(){
+				this.wrapper.style.width = '100%';
+				this.wrapper.style.position = 'fixed';
+			},
+			targetsInit: function(elm,attr){
+				
+				this.Targets.push({
+					elm : elm,
+					offset : attr.offset ? attr.offset : 0,
+					horizontal : attr.horizontal ? attr.horizontal : 0,
+					top : 0,
+					left : 0,
+					speedX : attr.speedX ? attr.speedX : 1,
+					speedY : attr.speedY ? attr.speedY : 1,
+					percentage :attr.percentage ? attr.percentage : 0
+				});
+			},
+			scroll : function(){
+				var scrollTopTmp = document.documentElement.scrollTop || document.body.scrollTop;
+				this.scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+				var offsetBottom = this.scrollTop + this.windowHeight;
+				this.wrapperUpdate(this.scrollTop);
+				for (var i = 0; i < this.Targets.length; i++) {
+					this.targetsUpdate(this.Targets[i]);
+				}
+			},
+			animate : function(){
+				this.scroll();
+				this.scrollId = requestAnimationFrame(this.animate.bind(this));
+			},
+			wrapperUpdate : function(){
+				
+				this.wapperOffset += (this.scrollTop - this.wapperOffset) * this.settings.wrapperSpeed;
+				this.wrapper.style.transform = 'translate3d(' + 0 + ',' +  Math.round(-this.wapperOffset* 100) / 100 + 'px ,' + 0 + ')';
+			},
+			targetsUpdate : function(target){
+				target.top += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedY) - target.top) * this.settings.targetPercentage;
+				target.left += (this.scrollTop * Number(this.settings.targetSpeed) * Number(target.speedX) - target.left) * this.settings.targetPercentage;
+				var targetOffsetTop = ( parseInt(target.percentage) - target.top - parseInt(target.offset) );
+				var offsetY = Math.round(targetOffsetTop * -100) / 100;
+				var offsetX = 0;
+				if(target.horizontal){
+					var targetOffsetLeft = ( parseInt(target.percentage) - target.left - parseInt(target.offset) );
+					offsetX = Math.round(targetOffsetLeft * -100) / 100;
+				}
+				target.elm.style.transform = 'translate3d(' + offsetX + 'px ,' + offsetY + 'px ,' + 0 +')';
+			},
+			resize: function(){
+				var self = this;
+				self.windowHeight = (window.innerHeight || document.documentElement.clientHeight || 0);
+				if( parseInt(self.wrapper.clientHeight) != parseInt(document.body.style.height)){
+					document.body.style.height = self.wrapper.clientHeight + 'px';
+				}
+				self.resizeId = requestAnimationFrame(self.resize.bind(self));
+			},
+			attachEvent : function(){
+				var self = this;
+				window.addEventListener('resize',function(){
+					if(!self.isResize){
+						cancelAnimationFrame(self.resizeId);
+						cancelAnimationFrame(self.scrollId);
+						self.isResize = true;
+						setTimeout(function(){
+							self.isResize = false;
+							self.resizeId = requestAnimationFrame(self.resize.bind(self));
+							self.scrollId = requestAnimationFrame(self.animate.bind(self));
+						},200);
+					}
+				});
+				
+			},
+			cancel: function() {
+				cancelAnimationFrame(this.resizeId);
+				cancelAnimationFrame(this.scrollId);
+				this.wrapper.removeAttribute('style');
+				for (var i = 0; i < this.Targets.length; i++) {
+					this.Targets[i].elm.removeAttribute('style');
+				}
+				this.wrapper = '';
+				this.Targets = [];
+				this.windowHeight = 0;
+				this.wapperOffset = 0;
+				this.isResize = false;
+				this.scrollId = "";
+				this.resizeId = "";
+			},
+		};
+
+		
+		var luxy = new Luxy();
+
+		return luxy;
+	})
+);
+
+
+
+================================================
+FILE: style/normalize.css
+================================================
+/*! normalize.css v8.0.1 */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+
+/**
+ * Remove the margin in all browsers.
+ */
+
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+
+/**
+ * Add the correct display in IE 10+.
+ */
+
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+
+[hidden] {
+  display: none;
+}
+
+
+================================================
+FILE: style/style.css
+================================================
+/* 1.1.general-setting-pages *************************/
+/****************************************************/
+:root {
+	--pr-color: #fff;
+	--second-color: #0a0a0a;
+	--cubicbz: cubic-bezier(.9, 0, .1, 1);
+	--fz-big: 60px;
+}
+
+* {
+	box-sizing: border-box;
+	font-family: 'Syne', sans-serif;
+	font-weight: 800;
+	margin: 0;
+	padding: 0;
+	font-feature-settings: 'pnum' on, 'lnum' on;
+}
+
+body {
+	background: var(--second-color);
+}
+
+/******************************************/
+section {
+	padding-top: 150px;
+	padding-bottom: 50px;
+}
+
+.wrapp {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	z-index: 1;
+}
+
+.content {
+	width: 100%;
+	padding: 0 70px;
+}
+
+.char {
+	display: inline-block;
+}
+
+/* Paralax Effect On GSAP **********************************/
+/* header ********/
+.header {
+	position: relative;
+	display: flex;
+	padding: 0 70px;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+}
+
+.header__marq {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}
+
+.header__marq {
+	width: 100%;
+	height: auto;
+	background: #171717;
+	overflow: hidden;
+}
+
+.header__marq-wrapp {
+	display: flex;
+	width: 100%;
+	height: auto;
+	padding: 8px 70px;
+}
+
+.header__marq-txt {
+	position: relative;
+	flex: 0 0 auto;
+	display: inline-block;
+	padding-right: 55px;
+	margin-right: 15px;
+	text-transform: uppercase;
+	color: var(--pr-color);
+	color: #9e9e9e;
+	font-size: 35px;
+}
+
+.header__marq-star {
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 0;
+}
+
+.header__marq-star img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.title {
+	position: relative;
+	margin: 0;
+	font-size: 85px;
+	text-align: center;
+	color: var(--pr-color);
+	text-transform: uppercase;
+	mix-blend-mode: difference;
+	z-index: 2;
+}
+
+.title_paralax {
+	display: inline-block;
+	will-change: transform;
+}
+
+.title .stroke {
+	display: inline-block;
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
+
+.header__img {
+	position: absolute;
+	width: 45%;
+	height: 100%;
+	top: 0;
+	right: 100px;
+	clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+	overflow: hidden;
+}
+
+.header__img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.section-title {
+	position: relative;
+	margin: 0;
+	margin-bottom: 60px;
+	line-height: .8;
+	font-size: 70px;
+	text-align: center;
+	color: var(--pr-color);
+	text-transform: uppercase;
+}
+
+.section-title .stroke {
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
+
+.section-title__square {
+	position: absolute;
+	display: inline-block;
+	width: 130px;
+	height: 130px;
+	border: 1px solid #4b4b4b;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+/* about ********/
+.about .section-title {
+	text-align: left;
+}
+
+.about__wrapp {
+	display: flex;
+	justify-content: space-between;
+}
+
+.about__img,
+.about__txt {
+	width: calc(50% - 35px);
+	height: auto;
+}
+
+.about__txt {
+	padding-right: 70px;
+}
+
+.about__p {
+	line-height: 1.4;
+	font-size: 20px;
+	color: #4b4b4b;
+}
+
+.about__img {
+	height: 100vh;
+	overflow: hidden;
+}
+
+.about__img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* benefits ********/
+.benefits__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 40px;
+	width: 100%;
+	height: auto;
+}
+
+.benefits__item {
+	list-style: none;
+	width: calc(33.33% - 27px);
+}
+
+.benefits__num {
+	display: inline-block;
+	font-size: 60px;
+	color: transparent;
+	-webkit-text-stroke: 1px var(--pr-color);
+}
+
+.benefits__p {
+	font-size: 20px;
+	color: #4b4b4b;
+}
+
+/* work ********/
+.work {
+	padding-top: 150px;
+}
+
+.work__wrapp {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 120px;
+	justify-content: space-between;
+	padding: 0 120px;
+}
+
+.work__item {
+	position: relative;
+	width: calc(50% - 60px);
+	height: 100vh;
+}
+
+.work__item-num {
+	position: absolute;
+	display: inline-block;
+	font-size: 70px;
+	color: var(--pr-color);
+	mix-blend-mode: difference;
+	z-index: 2;
+}
+
+.work__item-img {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.work__item-img img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* serv ********/
+.serv__item {
+	position: relative;
+	padding: 40px 0;
+	border-bottom: 1px solid #2f2e2e;
+}
+
+.serv__item-arrow {
+	position: absolute;
+	display: inline-block;
+	width: 55px;
+	height: 55px;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+.serv__item-arrow img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transform: rotate(180deg);
+}
+
+.serv__item-txt {
+	font-size: 50px;
+	color: #4b4b4b;
+	text-transform: uppercase;
+}
+
+/* footer ********/
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.footer__div {
+	font-size: 70px;
+	letter-spacing: 15px;
+	color: var(--pr-color);
+	text-transform: uppercase;
+}
+
+.footer__div span {
+	display: inline-block;
+}
+
